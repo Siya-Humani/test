@@ -1,0 +1,103 @@
+body {
+  font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #00b47f;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 300;
+    color: #ffffff;
+    font-weight: 300;
+    margin-bottom: 5px; /* Reduce the space between h2 and .congrats */
+}
+
+.fail {
+  width: 200px;
+  height: auto;
+  padding-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative; /* Set as relative to position .snow-image inside */
+}
+
+.form-image {
+  width: 180px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  padding-top: 35px;
+  margin-right: auto;
+  position: relative; /* Set as relative to position .snow-image inside */
+
+}
+
+p {
+  color: white;
+  font-weight: 200;
+  margin-top: 20px; /* Optional: add a little space between the paragraph and the rest */
+}
+
+.try {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    position: relative;
+    justify-content: center;
+    justify-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+  text-decoration: underline; /* Underline on hover */
+
+}
+
+/* Hover effect - Slightly enlarge */
+a:hover {
+  transform: scale(2.2);
+}
+
+/* Snow Image 1 - Top Left (existing one) */
+.snow-image {
+  position: absolute; /* Absolute positioning */
+  top: 50px; /* Distance from the top */
+  left: 50px; /* Distance from the left */
+  height: 50px; /* Snow image size */
+  width: 50px;
+}
+
+/* Snow Image 2 - Top Right */
+.snow-image-2 {
+  position: absolute;
+  top: 115px; /* Adjust top position */
+  right: 50px; /* Distance from the right */
+  height: 50px;
+  width: 50px;
+}
+
+/* Snow Image 3 - Bottom Left */
+.snow-image-3 {
+  position: absolute;
+  bottom: -20px; /* Distance from the bottom */
+  left: 60px; /* Distance from the left */
+  height: 50px;
+  width: 50px;
+}
+
+/* Snow Image 4 - Bottom Right */
+.snow-image-4 {
+  position: absolute;
+  bottom: -45px; /* Distance from the bottom */
+  right: 70px; /* Distance from the right */
+  height: 70px;
+  width: 70px;
+}

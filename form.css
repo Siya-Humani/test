@@ -1,0 +1,231 @@
+/* Base styles for mobile-first design */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #00b47f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-height: 100vh; /* Ensure body covers full viewport height */
+  }
+  
+  #userForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px; /* Reduced gap between form elements */
+  }
+  
+  #userForm input {
+    width: 80%;
+    padding: 6px; /* Reduced padding for smaller form elements */
+    margin: 2px 0; /* Reduced margin between form elements */
+    box-sizing: border-box;
+  }
+  
+  .terms-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .terms-container p {
+    font-weight: 300;
+    font-size: 12px;
+    color: #fff;
+  }
+  
+  .terms-container a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .terms-container a:hover {
+    text-decoration: underline;
+  }
+  
+  button {
+    width: 40%;
+    padding: 12px;
+    background-color: #006f4e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 5px;
+  }
+  
+  #userForm button {
+    cursor: pointer;
+  }
+  
+  /* Snow Image 1 - Top Left (existing one) */
+  .snow-image {
+    position: absolute; /* Absolute positioning */
+    top: 40px; /* Distance from the top */
+    left: 30px; /* Distance from the left */
+    height: 80px; /* Snow image size */
+    width: 80px;
+  }
+  
+  /* Snow Image 2 - Top Right */
+  .snow-image-2 {
+    position: absolute;
+    top: 80px; /* Adjust top position */
+    right: 30px; /* Distance from the right */
+    height: 60px;
+    width: 60px;
+  }
+  
+  /* Snow Image 3 - Bottom Left */
+  .snow-image-3 {
+    position: absolute;
+    bottom: 100px; /* Distance from the bottom */
+    left: 30px; /* Distance from the left */
+    height: 60px;
+    width: 60px;
+  }
+  
+  /* Snow Image 4 - Bottom Right */
+  .snow-image-4 {
+    position: absolute;
+    bottom: 20px; /* Distance from the bottom */
+    right: 30px; /* Distance from the right */
+    height: 80px;
+    width: 80px;
+  }
+  
+  .container {
+    width: 50%;
+    min-width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  
+  .form-image {
+    width: 40%;
+    height: 40%;
+    display: block;
+    margin-left: auto;
+    padding-top: 50px;
+    margin-right: auto;
+    position: relative; /* Set as relative to position .snow-image inside */
+  }
+  
+  .bottom-image {
+    width: 250px;
+    height: 150px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative; /* Set as relative to position .snow-image inside */
+  }
+  
+  .form-header {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  
+  p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #ffffff;
+    padding-top: 0; /* Reduce space between the image and the paragraph */
+    font-weight: medium;
+  }
+  
+  .go {
+    font-weight: bold;
+    font-size: 10px;
+  }
+  
+  form {
+    background: #00b47f;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+  }
+  
+  button:hover {
+    background-color: #005a3f;
+  }
+  
+  .promo-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  /* Mobile adjustment (for smaller screens) */
+  @media (max-width: 600px) {
+    #userForm input {
+      width: 60%; /* Increase width on smaller screens */
+      padding: 8px; /* Slightly larger padding on mobile */
+    }
+  }
+  
+  /* Responsive styles for larger screens */
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 600px; /* Increase max-width for tablet */
+    }
+  
+    h1 {
+      font-size: 30px; /* Slightly larger h1 size */
+      padding: 0 30px; /* Add padding for larger screens */
+    }
+  
+    p {
+      font-size: 18px; /* Adjust paragraph size for tablet */
+    }
+  
+    button {
+      height: 40px;
+      width: 35px;
+      margin-top: 20px; /* Add margin to separate from input fields */
+    }
+  
+    .form-image {
+      width: 200px;  /* Slightly smaller image for tablet */
+    }
+  }
+  
+    h1 {
+      font-size: 28px; /* Larger h1 for desktop */
+      padding: 0 10px; /* Add padding */
+      word-wrap: normal; /* Prevent word wrapping on desktop */
+    }
+  
+    p {
+      font-size: 20px; /* Increase paragraph size for desktop */
+    }
+  
+    .form-image {
+      width: 250px;  /* Increase image size for larger screens */
+      height: auto;
+    }
+  
+    button {
+      width: 40%; /* Button width for large screens */
+    }
+  

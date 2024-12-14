@@ -1,0 +1,111 @@
+/* General page styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #00b47f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh; /* Ensure body covers full viewport height */
+}
+
+.how-image {
+  width: 45%;
+  height: 40%;
+  display: block;
+  margin-left: auto;
+  padding-top: 80px;
+  padding-bottom: 15px;
+  margin-right: auto;
+  position: relative;
+}
+
+.how-to-play-container {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.line1, .line2, .line3 {
+  font-size: 18px;
+  display: block; /* Ensure each line takes up a new line */
+  text-align: center;
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove any padding */
+  line-height: 1.8; /* Reduce the line height to bring lines closer together */
+}
+
+.prompt {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+p {
+  font-weight: 400;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 0;
+  color: #fff;
+}
+
+/* Snow Image 1 - Top Left (existing one) */
+.snow-image {
+  position: absolute; /* Absolute positioning */
+  top: 80px; /* Distance from the top */
+  left: 50px; /* Distance from the left */
+  height: 50px; /* Snow image size */
+  width: 50px;
+}
+
+/* Snow Image 2 - Top Right */
+.snow-image-2 {
+  position: absolute;
+  top: 165px; /* Adjust top position */
+  right: 50px; /* Distance from the right */
+  height: 50px;
+  width: 50px;
+}
+
+/* Snow Image 3 - Bottom Left */
+.snow-image-3 {
+  position: absolute;
+  bottom: -70px; /* Distance from the bottom */
+  left: 30px; /* Distance from the left */
+  height: 50px;
+  width: 50px;
+}
+
+/* Snow Image 4 - Bottom Right */
+.snow-image-4 {
+  position: absolute;
+  bottom: -85px; /* Distance from the bottom */
+  right: 30px; /* Distance from the right */
+  height: 70px;
+  width: 70px;
+}
+/* Button styling */
+.play-button {
+  width: 165px;
+  font-size: 28px;
+  height: 50px;
+  padding: 12px;
+  background-color: #006f4e;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.play-button:hover {
+  background-color: #057252; /* Darker green on hover */
+}
+
+/* Adjusted .how-image for better responsiveness */

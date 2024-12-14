@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="form.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Snow Images -->
+    <div class="snow-images">
+        <img src="./Asset 9.png" alt="Snow" class="snow-image">
+        <img src="./Asset 9.png" alt="Snow" class="snow-image-2">
+        <img src="./Asset 9.png" alt="Snow" class="snow-image-3">
+        <img src="./Asset 9.png" alt="Snow" class="snow-image-4">
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Form Header -->
+        <div class="form-header">
+            <img src="./asset4.png" alt="Spin the Wheel" class="form-image">
+            <div class="submit">
+            <p>PLEASE SUBMIT YOUR INFORMATION TO BE ENTERED IN THE RAFFLE</p>
+        </div>
+
+        <!-- Form -->        
+        <form id="userForm" action="https://formspree.io/f/xpwzeglb" method="POST"><form>
+            <input type="text" id="name" name="name" placeholder="NAME & SURNAME" required>
+            <input type="tel" id="phone" name="phone" placeholder="PHONE" required pattern="[\+]?[0-9]{10,13}">
+            <input type="text" id="city" name="city" placeholder="CITY" required>
+            <input type="text" id="socialHandle" name="socialHandle" placeholder="INSTAGRAM HANDLE" required>
+            <input type="email" id="email" name="email" placeholder="EMAIL ADDRESS" required>
+            <button type="submit">SUBMIT</button>
+        </form>
+            <img src="./boltxmas.png" alt="Spin the Wheel" class="bottom-image">
+            <img src="./Asset 9.png" alt="Snow" class="snow-image-3">
+            <img src="./Asset 9.png" alt="Snow" class="snow-image-4">
+        <div class="terms-container">
+            <p><a href="https://docs.google.com/document/d/16KZZBE2jQ0VPrkzx-pnRpHAYt3l09rjmIaEbdwuEKOs/edit?tab=t.0" target="_blank">TERMS AND CONDITIONS APPLY</a></p>
+        </div>       
+    <script>
+        // Function to store form data in localStorage and redirect to instructions page
+        document.getElementById('userForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+
+            // Get user input values
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+
+            // Store details in localStorage (or sessionStorage)
+            localStorage.setItem('userName', name);
+            localStorage.setItem('userPhone', phone);
+            localStorage.setItem('userEmail', email);
+
+            window.location.href = 'thankyou.html'; // You can add query params here too if needed
+        });
+    </script>
+</body>
+</html>
