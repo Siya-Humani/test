@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // If 200 people have already won or the player has already won, show the "Try Again" page
   if (totalWinners >= maxWinners) {
-    window.location.href = 'allwinners.html';  // Redirect to all winners page if the max is reached
+    window.location.href = 'tryagain.html';  // Redirect to all winners page if the max is reached
   } else if (prizeWon === 'true') {
     window.location.href = 'tryagain.html';  // Redirect if the player has already won
   } else if (hasPlayed === 'true') {
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   spinBtn.addEventListener('click', function() {
     // Random spin duration between 1500ms and 3000ms
-    const spinDuration = Math.floor(Math.random() * 2000) + 3000; 
+    const spinDuration = Math.floor(Math.random() * 2000) + 3000;
     const randomDegree = Math.floor(Math.random() * 360);
     const finalDegree = randomDegree + (360 * 3);  // 3 full rotations
 
@@ -37,10 +37,19 @@ document.addEventListener('DOMContentLoaded', function() {
       if (landingSlice === 3) {  // Slice 4 is at index 3
         localStorage.setItem('prizeWon', 'true');
         localStorage.setItem('hasPlayed', 'true');
-        window.location.href = 'prize.html';
+        // Update the total winners count
+        let updatedTotalWinners = totalWinners + 1;
+        localStorage.setItem('totalWinners', updatedTotalWinners.toString());
+
+        // Optional: Display some feedback before redirecting
+        setTimeout(function() {
+          window.location.href = 'prize.html';
+        }, 1000);  // Delay the redirect by 1 second for a better experience
       } else {
         localStorage.setItem('hasPlayed', 'true');
-        window.location.href = 'tryagain.html';
+        setTimeout(function() {
+          window.location.href = 'tryagain.html';
+        }, 1000);  // Delay the redirect by 1 second
       }
     }, spinDuration);
   });
